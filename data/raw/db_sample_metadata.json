@@ -1,0 +1,451 @@
+{
+"SELECT \n    m.name AS table_name,\n    p.name AS column_name,\n    p.type AS data_type,\n    p.\"notnull\" AS not_null,\n    p.pk AS primary_key\nFROM sqlite_master m\nJOIN pragma_table_info(m.name) p\nWHERE m.type = 'table'\nORDER BY m.name, p.cid": [
+	{
+		"table_name" : "Album",
+		"column_name" : "AlbumId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "Album",
+		"column_name" : "Title",
+		"data_type" : "NVARCHAR(160)",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Album",
+		"column_name" : "ArtistId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Artist",
+		"column_name" : "ArtistId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "Artist",
+		"column_name" : "Name",
+		"data_type" : "NVARCHAR(120)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "CustomerId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "FirstName",
+		"data_type" : "NVARCHAR(40)",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "LastName",
+		"data_type" : "NVARCHAR(20)",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "Company",
+		"data_type" : "NVARCHAR(80)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "Address",
+		"data_type" : "NVARCHAR(70)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "City",
+		"data_type" : "NVARCHAR(40)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "State",
+		"data_type" : "NVARCHAR(40)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "Country",
+		"data_type" : "NVARCHAR(40)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "PostalCode",
+		"data_type" : "NVARCHAR(10)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "Phone",
+		"data_type" : "NVARCHAR(24)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "Fax",
+		"data_type" : "NVARCHAR(24)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "Email",
+		"data_type" : "NVARCHAR(60)",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Customer",
+		"column_name" : "SupportRepId",
+		"data_type" : "INTEGER",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "EmployeeId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "LastName",
+		"data_type" : "NVARCHAR(20)",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "FirstName",
+		"data_type" : "NVARCHAR(20)",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "Title",
+		"data_type" : "NVARCHAR(30)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "ReportsTo",
+		"data_type" : "INTEGER",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "BirthDate",
+		"data_type" : "DATETIME",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "HireDate",
+		"data_type" : "DATETIME",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "Address",
+		"data_type" : "NVARCHAR(70)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "City",
+		"data_type" : "NVARCHAR(40)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "State",
+		"data_type" : "NVARCHAR(40)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "Country",
+		"data_type" : "NVARCHAR(40)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "PostalCode",
+		"data_type" : "NVARCHAR(10)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "Phone",
+		"data_type" : "NVARCHAR(24)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "Fax",
+		"data_type" : "NVARCHAR(24)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Employee",
+		"column_name" : "Email",
+		"data_type" : "NVARCHAR(60)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Genre",
+		"column_name" : "GenreId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "Genre",
+		"column_name" : "Name",
+		"data_type" : "NVARCHAR(120)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Invoice",
+		"column_name" : "InvoiceId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "Invoice",
+		"column_name" : "CustomerId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Invoice",
+		"column_name" : "InvoiceDate",
+		"data_type" : "DATETIME",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Invoice",
+		"column_name" : "BillingAddress",
+		"data_type" : "NVARCHAR(70)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Invoice",
+		"column_name" : "BillingCity",
+		"data_type" : "NVARCHAR(40)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Invoice",
+		"column_name" : "BillingState",
+		"data_type" : "NVARCHAR(40)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Invoice",
+		"column_name" : "BillingCountry",
+		"data_type" : "NVARCHAR(40)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Invoice",
+		"column_name" : "BillingPostalCode",
+		"data_type" : "NVARCHAR(10)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Invoice",
+		"column_name" : "Total",
+		"data_type" : "NUMERIC(10,2)",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "InvoiceLine",
+		"column_name" : "InvoiceLineId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "InvoiceLine",
+		"column_name" : "InvoiceId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "InvoiceLine",
+		"column_name" : "TrackId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "InvoiceLine",
+		"column_name" : "UnitPrice",
+		"data_type" : "NUMERIC(10,2)",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "InvoiceLine",
+		"column_name" : "Quantity",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "MediaType",
+		"column_name" : "MediaTypeId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "MediaType",
+		"column_name" : "Name",
+		"data_type" : "NVARCHAR(120)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Playlist",
+		"column_name" : "PlaylistId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "Playlist",
+		"column_name" : "Name",
+		"data_type" : "NVARCHAR(120)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "PlaylistTrack",
+		"column_name" : "PlaylistId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "PlaylistTrack",
+		"column_name" : "TrackId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 2
+	},
+	{
+		"table_name" : "Track",
+		"column_name" : "TrackId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 1
+	},
+	{
+		"table_name" : "Track",
+		"column_name" : "Name",
+		"data_type" : "NVARCHAR(200)",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Track",
+		"column_name" : "AlbumId",
+		"data_type" : "INTEGER",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Track",
+		"column_name" : "MediaTypeId",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Track",
+		"column_name" : "GenreId",
+		"data_type" : "INTEGER",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Track",
+		"column_name" : "Composer",
+		"data_type" : "NVARCHAR(220)",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Track",
+		"column_name" : "Milliseconds",
+		"data_type" : "INTEGER",
+		"not_null" : 1,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Track",
+		"column_name" : "Bytes",
+		"data_type" : "INTEGER",
+		"not_null" : 0,
+		"primary_key" : 0
+	},
+	{
+		"table_name" : "Track",
+		"column_name" : "UnitPrice",
+		"data_type" : "NUMERIC(10,2)",
+		"not_null" : 1,
+		"primary_key" : 0
+	}
+]}
