@@ -2,6 +2,7 @@ Description:
 
 This project is aiming to generate the sql query for the specific custom databases using natural language.
 
+```
 text2sql/
 │── README.md                 # Project overview, setup, usage instructions
 │── requirements.txt           # Python dependencies 
@@ -57,8 +58,8 @@ text2sql/
 └── docker/                    # Containerization setup
     ├── Dockerfile
     └── docker-compose.yml
-
+```
 # create the virtual env
-uv venv .venv
+uv venv .venv \
 uv pip install -r requirements.txt
 
