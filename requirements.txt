@@ -1,0 +1,9 @@
+langchain
+langchain_community
+langchain-text-splitters
+faiss-cpu
+chromadb
+tqdm
+pydantic
+pytest
+
