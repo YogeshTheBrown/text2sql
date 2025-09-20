@@ -1,0 +1,31 @@
+project:
+  name: text2sql
+  version: "0.1.0"
+
+data:
+  raw_path: "data/raw"
+  processed_path: "data/processed"
+  embeddings_path: "data/embeddings"
+
+retriever:
+  vectorstore: "faiss"
+  chunk_size: 500
+  chunk_overlap: 50
+
+ollama:
+  model_name: "gemma3:4b"
+  embedding_model: "nomic-embed-text:latest"
+  api_base_url: "http://localhost:11434"
+  temperature: 0.3
+  max_tokens: 1024
+
+vectorstore:
+  type: "FAISS"
+  embedding_dimension: 768
+  index_path: "data/vectorstore/index.faiss"
+
+pipelines:
+  top_k: 3 # Number of top documents to retrieve
+  chunk_size: 512
+  chunk_overlap: 50
+
