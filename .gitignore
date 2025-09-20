@@ -1,0 +1,45 @@
+# Python-specific files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# RAG system specific files
+# Database files (e.g., SQLite databases, vector store indices)
+*.db
+*.sqlite
+*.sqlite3
+vector_store_index/ # Or whatever directory you use for your vector store
+
+# Data files (if not part of the source code)
+data/
+raw_data/
+processed_data/
+
+# Model files (if not managed by DVC or similar tools)
+models/
+checkpoints/
+
+# Environment variables and sensitive information
+.env
+.flaskenv
+config.ini
+secrets.yaml
+
+# IDE-specific files (e.g., VS Code, PyCharm)
+.vscode/
+.idea/
+
+# Operating System files
+.DS_Store
+Thumbs.db
